@@ -1,18 +1,24 @@
 .application{
   display: block;
-  margin: 0 auto;
   width: 375px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
 
   &__glass{
     width: 280px;
     height: 280px;
-    position: absolute;
+    position: relative;
+    left: 47.5px;
+    top: 186px;
   }
 
   &__water{
     position: relative;
-    top: 65px;
-    left: 60px;
+    left: 106px;
+    top: 251px;
+
   }
 
   &__count{
@@ -21,10 +27,7 @@
     font-weight: 500;
     font-size: 112px;
     line-height: 131px;
-    align-items: center;
-    text-align: center;
     color: #000000;
-    margin: 0;
     position: relative;
   }
 }
