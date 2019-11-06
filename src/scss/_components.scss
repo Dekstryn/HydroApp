@@ -1,0 +1,59 @@
+.application{
+  display: block;
+  margin: 0 auto;
+  width: 375px;
+  position: relative;
+  &__glass{
+    position: absolute;
+    width: 280px;
+    height: 280px;
+    left: 48px;
+    top: 185px;
+  }
+
+  &__water{
+    position: absolute;
+    left: 20.88%;
+    right: 21.62%;
+    top: 22.47%;
+    bottom: 6.25%;
+    background: #2196F3;
+  }
+
+  &__count{
+    position: absolute;
+    left: 38.4%;
+    right: 38.13%;
+    top: 37.93%;
+    bottom: 50%;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 112px;
+    line-height: 131px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #000000;
+  }
+
+  &__add{
+    position: absolute;
+    width: 216px;
+    height: 47px;
+    left: 79px;
+    top: 532px;
+    
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 4px;
+  }
+  &__remove{
+    position: absolute;
+    width: 184px;
+    height: 24px;
+    left: 95px;
+    top: 612px;    
+  }
+}
