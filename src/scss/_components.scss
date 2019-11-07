@@ -11,14 +11,7 @@
     height: 280px;
     position: relative;
     left: 47.5px;
-    top: 186px;
-  }
-
-  &__water{
-    position: relative;
-    left: 106px;
-    top: 251px;
-
+    margin: 0 auto;
   }
 
   &__count{
@@ -29,6 +22,9 @@
     line-height: 131px;
     color: #000000;
     position: relative;
+    display: inline-block;
+    bottom: 69.91px;
+    right: 125px;
   }
 }
 .interaction{
