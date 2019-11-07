@@ -28,16 +28,31 @@
   }
 }
 .interaction{
+  position: absolute;
+  left: 50%;
+  top: 70%;
+  transform: translate(-50%);
+  width: 375px;
   &__add{
     width: 216px;
     height: 47px;
     background: #FFFFFF;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 4px;
+    box-shadow: 0px 4px 4px rgba(188, 187, 247, 0.25);
+    border-radius: 18px;
+    position: relative;
+    :hover{
+      transform: scale(1.2);
+    }
   }
   &__remove{
     width: 184px;
-    height: 24px;
-    top: 612px;    
+    height: 32px;
+    position: relative;
+    top: 12px; 
+    left: 16px; 
+    border-radius: 18px;
+    :hover{
+      transform: scale(1.2);
+    }
   }
 }
