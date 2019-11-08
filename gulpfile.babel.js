@@ -70,7 +70,7 @@ gulp.task("sass", () => {
     .on("error", sass.logError)
     .pipe(
       postcss([
-        autoprefixer({ grid: true, browserslist: ["> 5%", "last 4 versions"] })
+        autoprefixer({ grid: true, overrideBrowserslist: ["> 5%", "last 4 versions"] })
       ])
     )
     .pipe(sourcemaps.write("."))
