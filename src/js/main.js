@@ -40,3 +40,16 @@ buttonAdd.addEventListener('click', (e) =>{
   localStorage.setItem(dayStr, glassStr);
   counter.textContent = `${glass}`;
 })
+
+buttonRemove.addEventListener('click', (e) =>{
+  if(glass>0){
+  glass--;
+  }
+  else if(glass==0){
+    glass = 0;
+  }
+  glassStr = JSON.stringify(glass);
+  let dayStr = JSON.stringify(day);
+  localStorage.setItem(dayStr, glassStr);
+  counter.textContent = `${glass}`;
+})
