@@ -34,7 +34,12 @@ const buttonRemove = document.querySelector('.interaction__remove--js');
 counter.textContent = `${glass}`;
 
 buttonAdd.addEventListener('click', (e) =>{
-  glass++;
+  if(glass<99){
+    glass++;
+    }
+    else {
+      glass = glass;
+    }
   glassStr = JSON.stringify(glass);
   let dayStr = JSON.stringify(day);
   localStorage.setItem(dayStr, glassStr);
@@ -45,7 +50,7 @@ buttonRemove.addEventListener('click', (e) =>{
   if(glass>0){
   glass--;
   }
-  else if(glass==0){
+  else {
     glass = 0;
   }
   glassStr = JSON.stringify(glass);
