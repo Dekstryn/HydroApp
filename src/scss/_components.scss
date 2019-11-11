@@ -1,0 +1,74 @@
+.application{
+  display: block;
+  width: 375px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+
+  &__glass{
+    width: 280px;
+    height: 280px;
+    position: relative;
+    left: 47.5px;
+    margin: 0 auto;
+  }
+
+  &__count{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 112px;
+    line-height: 131px;
+    color: #000000;
+    position: relative;
+    display: inline-block;
+    bottom: 69.91px;
+    right: 125px;
+  }
+}
+.interaction{
+  position: absolute;
+  left: 50%;
+  top: 70%;
+  transform: translate(-50%);
+  width: 375px;
+  &__add{
+    width: 216px;
+    height: 47px;
+    background: #759fd4;
+    box-shadow: 2px 4px 4px rgba(179, 209, 205, 0.35);
+    border-radius: 18px;
+    position: relative;
+    left: 79px;
+    transition: all .2s;
+
+    &:hover{
+      transform: scale(1.2);
+      }
+    &:active{
+      box-shadow: 2px 4px 4px rgba(179, 209, 205, 0);
+      transform: scale(1.1);
+      }
+  }
+  &__remove{
+    width: 184px;
+    height: 32px;
+    position: relative;
+    background: #759fd4;
+    box-shadow: 2px 4px 4px rgba(179, 209, 205, 0.35);
+    top: 12px; 
+    left: 16px; 
+    border-radius: 18px;
+    left: 96px;
+    transition: all .2s;
+
+    &:hover{
+      transform: scale(1.2);
+    }
+    &:active{
+      box-shadow: 2px 4px 4px rgba(179, 209, 205, 0);
+      transform: scale(1.1);
+      }
+  }
+}
