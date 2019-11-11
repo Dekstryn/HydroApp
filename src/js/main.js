@@ -1,6 +1,6 @@
 "use strict";
 
-// service worker registration - remove if you're not going to use it
+// service worker registration 
 
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', function() {
@@ -14,9 +14,11 @@ if ('serviceWorker' in navigator) {
   });
 }
 
-// place your code below
+// Variables definition
+let glass = 0;
+let d = new Date();
+let day = d.getDay(); //set day as number starting from monday = 1
 
-
-console.log(`Hello world!`);
+console.log(glass, day)
 
 
