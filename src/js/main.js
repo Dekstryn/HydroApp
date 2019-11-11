@@ -18,7 +18,14 @@ if ('serviceWorker' in navigator) {
 let glass = 0;
 let d = new Date();
 let day = d.getDay(); //set day as number starting from monday = 1
+const buttonAdd = document.querySelector('.interaction__add--js');
+const buttonRemove = document.querySelector('.interaction__remove--js');
 
-console.log(glass, day)
+console.log(glass, day) //just for test 
 
+//Save variables in local storage
+const glassStr = JSON.stringify(glass);
+const dayStr = JSON.stringify(day);
+localStorage.setItem('glassSave', glassStr);
+localStorage.setItem('daySave', dayStr);
 
