@@ -22,11 +22,19 @@ const counter = document.querySelector('.application__count--js');
 const buttonAdd = document.querySelector('.interaction__add--js');
 const buttonRemove = document.querySelector('.interaction__remove--js');
 
-console.log(glass, day) //just for test 
 
 //Save variables in local storage
-const glassStr = JSON.stringify(glass);
-const dayStr = JSON.stringify(day);
-localStorage.setItem('glassSave', glassStr);
-localStorage.setItem('daySave', dayStr);
+let glassStr = JSON.stringify(glass);
+let dayStr = JSON.stringify(day);
+localStorage.setItem(dayStr, glassStr);
+//localStorage.setItem('daySave', dayStr);
 
+buttonAdd.addEventListener('click', (e) =>{
+  glassStr == localStorage.getItem(dayStr);
+  glass == JSON.parse(glassStr);
+  glass = glass + 1;
+  glassStr = JSON.stringify(glass);
+  localStorage.setItem(dayStr, glassStr);
+  counter.textContent = `${glass}`;
+  console.log(glass, day) //just for test 
+})
