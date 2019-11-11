@@ -32,7 +32,7 @@ localStorage.setItem(dayStr, glassStr);
 buttonAdd.addEventListener('click', (e) =>{
   glassStr == localStorage.getItem(dayStr);
   glass == JSON.parse(glassStr);
-  glass = glass + 1;
+  glass++;
   glassStr = JSON.stringify(glass);
   localStorage.setItem(dayStr, glassStr);
   counter.textContent = `${glass}`;
