@@ -16,15 +16,17 @@ if ('serviceWorker' in navigator) {
 
 // Variables definition
 let d = new Date();
-let day = d.getDay(); //set day as number starting from monday = 1
-let dayStr = JSON.stringify(day);
+let month = d.getMonth() +1; //set month
+let date = d.getDate(); //set day
+let monthStr = JSON.stringify(month);
+let dateStr = JSON.stringify(date);
+let dayStr = dateStr + " " + monthStr;
 let glassStr = localStorage.getItem(dayStr);
 let glass = JSON.parse(glassStr);
 
 if(glass==null){
   glass = 0;
 }
-console.log(glassStr, glass) //just for test 
 
 const counter = document.querySelector('.application__count--js');
 const buttonAdd = document.querySelector('.interaction__add--js');
@@ -41,7 +43,6 @@ buttonAdd.addEventListener('click', (e) =>{
       glass = glass;
     }
   glassStr = JSON.stringify(glass);
-  let dayStr = JSON.stringify(day);
   localStorage.setItem(dayStr, glassStr);
   counter.textContent = `${glass}`;
 })
@@ -54,7 +55,6 @@ buttonRemove.addEventListener('click', (e) =>{
     glass = 0;
   }
   glassStr = JSON.stringify(glass);
-  let dayStr = JSON.stringify(day);
   localStorage.setItem(dayStr, glassStr);
   counter.textContent = `${glass}`;
 })
