@@ -30,7 +30,7 @@
       display: inline-block;
       // end options
       
-      @media (min-width: $breakpoint-alpha) {
+      @media (min-width: 480px) {
         display: none;
       }
     }
@@ -39,7 +39,7 @@
   th, td {
     text-align: left;
     
-    @media (min-width: $breakpoint-alpha) {
+    @media (min-width: 480px) {
       display: table-cell;
       padding: .25em .5em;
       
@@ -75,7 +75,7 @@
   }
   th, td {
     margin: .5em 1em;
-    @media (min-width: $breakpoint-alpha) { 
+    @media (min-width: 480px) { 
       padding: 1em !important; 
     }
   }
