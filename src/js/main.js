@@ -58,3 +58,33 @@ buttonRemove.addEventListener('click', (e) =>{
   localStorage.setItem(dayStr, glassStr);
   counter.textContent = `${glass}`;
 })
+
+//Summary calculations
+//checking if it first week of the month
+let nm = date - 7;
+console.log(`Sprawdzenie dnia ${nm}`);
+if (nm<=0){
+  console.log(`Coś poszło nie tak`);
+}
+else {
+  for (let i = 7; i<7; i++){
+    //Date set
+    date = date - i;
+    dateStr = JSON.stringify(date);
+    dayStr = dateStr + " " + monthStr;
+
+    //Glass number import
+    glassStr = localStorage.getItem(dayStr);
+    glass = JSON.parse(glassStr);
+    if(glass==null){
+      glass = 0;
+    }
+    console.log(`Iloś szklanek: ${glass}`);
+    //let dayTable = "summary__day" + i + "--js";
+    //let dayGlass = "summary__glass" + i + "--js";
+
+    //const `${dayTable}` = document.querySelector(`.${dayTable}`);
+    
+    //const glass1 = document.querySelector('.application__count--js');
+  }
+}
