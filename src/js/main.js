@@ -91,11 +91,9 @@ let j = 0;
   while (i < 16) {
     const daySummary = document.querySelector('.summary__day' + j + '--js');
     daySummary.textContent = glassHistory[i];
-    console.log(daySummary, glassHistory[i]);
     const glassSummary = document.querySelector('.summary__glass' + j + '--js');
     i++;
     glassSummary.textContent = glassHistory[i];
-    console.log(glassSummary, glassHistory[i]);
     i++;
     j++;
    }
