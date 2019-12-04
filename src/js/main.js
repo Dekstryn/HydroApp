@@ -84,17 +84,18 @@ buttonRemove.addEventListener('click', (e) =>{
   counter.textContent = `${glass}`;
 })
 
-//History operation test
-/*localStorage.setItem(history, '12 02, 5, 13 02, 7, 14 02, 8');
-var test = localStorage.getItem(history);
-var res = test.split(",");
-let resLenght = res.length;
-let i;
-  //for (i = 0; i < res.length; i++) {
+//History preparation
+let i = 0;
+let j = 0;
 
-  //  }
-
-res.shift();
-let newHistory = res.toString();
-localStorage.setItem(history, newHistory);
-*/
+  while (i < 16) {
+    const daySummary = document.querySelector('.summary__day' + j + '--js');
+    daySummary.textContent = glassHistory[i];
+    console.log(daySummary, glassHistory[i]);
+    const glassSummary = document.querySelector('.summary__glass' + j + '--js');
+    i++;
+    glassSummary.textContent = glassHistory[i];
+    console.log(glassSummary, glassHistory[i]);
+    i++;
+    j++;
+   }
