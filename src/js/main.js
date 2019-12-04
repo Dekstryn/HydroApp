@@ -1,7 +1,6 @@
 "use strict";
 
 // service worker registration 
-
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', function() {
     navigator.serviceWorker.register('serviceworker.js').then(function(registration) {
@@ -21,7 +20,12 @@ let date = d.getDate(); //set day
 let monthStr = JSON.stringify(month);
 let dateStr = JSON.stringify(date);
 let dayStr = dateStr + " " + monthStr;
-let glassStr = localStorage.getItem(dayStr);
+
+//Get local history
+let localHistory = localStorage.getItem(history);
+let glassHistory = localHistory.split(",");
+let glassHistoryLenght = glassHistory.length;
+let glassStr = glassHistory[glassHistoryLenght-1];
 let glass = JSON.parse(glassStr);
 
 if(glass==null){
@@ -60,7 +64,7 @@ buttonRemove.addEventListener('click', (e) =>{
 })
 
 //History operation test
-localStorage.setItem(history, '12 02, 5, 13 02, 7, 14 02, 8');
+/*localStorage.setItem(history, '12 02, 5, 13 02, 7, 14 02, 8');
 var test = localStorage.getItem(history);
 var res = test.split(",");
 let resLenght = res.length;
@@ -72,3 +76,4 @@ let i;
 res.shift();
 let newHistory = res.toString();
 localStorage.setItem(history, newHistory);
+*/
