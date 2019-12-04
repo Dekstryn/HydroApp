@@ -58,7 +58,6 @@ buttonAdd.addEventListener('click', (e) =>{
     glassHistory.push(dayStr);
     glassHistory.push(glassStr);
   }
-    
   let newHistory = glassHistory.toString();
   localStorage.setItem(history, newHistory);
   counter.textContent = `${glass}`;
@@ -72,7 +71,16 @@ buttonRemove.addEventListener('click', (e) =>{
     glass = 0;
   }
   glassStr = JSON.stringify(glass);
-  localStorage.setItem(dayStr, glassStr);
+  if (glassHistory[glassHistoryLenght-2] == dayStr){
+    glassHistory.pop();
+    glassHistory.push(glassStr);
+  }
+  else{
+    glassHistory.push(dayStr);
+    glassHistory.push(glassStr);
+  }
+  let newHistory = glassHistory.toString();
+  localStorage.setItem(history, newHistory);
   counter.textContent = `${glass}`;
 })
 
