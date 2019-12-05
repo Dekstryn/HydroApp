@@ -1,7 +1,5 @@
 "use strict";
 
-import { Z_DEFAULT_STRATEGY } from "zlib";
-
 // service worker registration 
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', function() {
