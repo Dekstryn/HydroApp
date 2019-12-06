@@ -1,0 +1,50 @@
+.summary{
+  margin: 3em auto;
+
+  &__display{
+    display: none;
+  }
+
+  &__headline {
+    font-weight: normal;
+    letter-spacing: -1px;
+    color: rgb(211, 218, 226);
+    text-align: center;
+
+  }
+
+  &__table {
+    background: #34495E;
+    color: #fff;
+    border-radius: .4em;
+    overflow: hidden;
+    margin: 1em auto;
+    
+    tr {
+      border-color: lighten(#34495E, 10%);
+      border-top: 1px solid #ddd;
+      border-bottom: 1px solid #ddd;
+    }
+    
+    th, td {
+      margin: .5em 1em;
+      text-align: center;
+      display: table-cell;
+      padding: .25em .5em;
+      
+      &:first-child {
+        padding-left: 0;
+      }
+        
+      &:last-child {
+        padding-right: 0;
+      }
+      &:before {
+        color: #dd5;
+      }
+      @media (min-width: 480px) { 
+        padding: 1em !important; 
+      }
+    }
+  }
+}

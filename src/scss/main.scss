@@ -1,6 +1,7 @@
 @import "_normalize";
 @import "_variables";
 @import "_components";
+@import "_table";
 
 
 html {
@@ -12,4 +13,10 @@ html {
 }
 body{
   background-image: url("/assets/img/blue_water.jpg");
+}
+.application__display{
+  display: none;
+}
+.interaction__display{
+  display: none;
 }
