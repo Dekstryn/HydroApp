@@ -128,4 +128,8 @@ buttonHistory.addEventListener('click', (e) =>{
       i++;
       j++;
     }
+  //Display history
+  document.querySelector('.summary--js').classList.remove('summary__display');
+  document.querySelector('.application--js').classList.add('application__display');
+  document.querySelector('.interaction--js').classList.add('interaction__display');
 })
