@@ -46,6 +46,7 @@ else{
 const counter = document.querySelector('.application__count--js');
 const buttonAdd = document.querySelector('.interaction__add--js');
 const buttonRemove = document.querySelector('.interaction__remove--js');
+const buttonHistory = document.querySelector('.interaction__history--js');
 
 //set starter glass value display
 counter.textContent = `${glass}`;
@@ -104,22 +105,24 @@ buttonRemove.addEventListener('click', (e) =>{
   glassHistoryLenght = glassHistory.length;
 })
 
-//Clearing history
-while (glassHistoryLenght > 16){
-  glassHistory.shift();
-  glassHistoryLenght = glassHistory.length;
-}
+buttonHistory.addEventListener('click', (e) =>{
+  //Clearing history
+  while (glassHistoryLenght > 16){
+    glassHistory.shift();
+    glassHistoryLenght = glassHistory.length;
+  }
 
-//History preparation
-let i = 0;
-let j = 0;
+  //History preparation
+  let i = 0;
+  let j = 0;
 
-  while (i < 16) {
-    const daySummary = document.querySelector('.summary__day' + j + '--js');
-    daySummary.textContent = glassHistory[i];
-    const glassSummary = document.querySelector('.summary__glass' + j + '--js');
-    i++;
-    glassSummary.textContent = glassHistory[i];
-    i++;
-    j++;
-   }
+    while (i < 16) {
+      const daySummary = document.querySelector('.summary__day' + j + '--js');
+      daySummary.textContent = glassHistory[i];
+      const glassSummary = document.querySelector('.summary__glass' + j + '--js');
+      i++;
+      glassSummary.textContent = glassHistory[i];
+      i++;
+      j++;
+    }
+})
