@@ -25,6 +25,7 @@ let glass;
 let glassStr;
 //Get local history
 let localHistory = localStorage.getItem(history);
+let newHistory;
 if (localHistory == null) {
   glassHistory = [dayStr, 0];
 }
@@ -69,7 +70,7 @@ buttonAdd.addEventListener('click', (e) =>{
     console.log('bubel');
     console.log(glassHistory[glassHistoryLenght-2], dayStr);
   }
-  let newHistory = glassHistory.toString();
+  newHistory = glassHistory.toString();
   localStorage.setItem(history, newHistory);
   counter.textContent = `${glass}`;
   //Refresh sesion variable
@@ -96,7 +97,7 @@ buttonRemove.addEventListener('click', (e) =>{
     glassHistory.push(dayStr);
     glassHistory.push(glassStr);
   }
-  let newHistory = glassHistory.toString();
+  newHistory = glassHistory.toString();
   localStorage.setItem(history, newHistory);
   counter.textContent = `${glass}`;
   //Refresh sesion variable
@@ -110,6 +111,8 @@ buttonHistory.addEventListener('click', (e) =>{
   while (glassHistoryLenght > 16){
     glassHistory.shift();
     glassHistoryLenght = glassHistory.length;
+    newHistory = glassHistory.toString();
+    localStorage.setItem(history, newHistory);
   }
 
   //History preparation
