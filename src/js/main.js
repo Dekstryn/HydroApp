@@ -48,6 +48,7 @@ const counter = document.querySelector('.application__count--js');
 const buttonAdd = document.querySelector('.interaction__add--js');
 const buttonRemove = document.querySelector('.interaction__remove--js');
 const buttonHistory = document.querySelector('.interaction__history--js');
+const buttonCloseHistory = document.querySelector('.interaction__closeHistory--js');
 
 //set starter glass value display
 counter.textContent = `${glass}`;
@@ -132,4 +133,10 @@ buttonHistory.addEventListener('click', (e) =>{
   document.querySelector('.summary--js').classList.remove('summary__display');
   document.querySelector('.application--js').classList.add('application__display');
   document.querySelector('.interaction--js').classList.add('interaction__display');
+})
+
+buttonCloseHistory.addEventListener('click', (e)=>{
+  document.querySelector('.summary--js').classList.add('summary__display');
+  document.querySelector('.application--js').classList.remove('application__display');
+  document.querySelector('.interaction--js').classList.remove('interaction__display');
 })
