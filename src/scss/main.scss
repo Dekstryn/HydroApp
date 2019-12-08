@@ -9,6 +9,7 @@ html {
 
 *, *:before, *:after {
   box-sizing: inherit;
+  touch-action: manipulation;
 }
 body{
   background-image: url("../assets/img/blue_water.jpg");
