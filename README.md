@@ -9,3 +9,6 @@ This is PWA application with the help you count glasses of water you drink durin
 - Simple PWA
 - Webpack
 - Gulp
+## Update
+### Version 1.01
+Now application work even offline.
