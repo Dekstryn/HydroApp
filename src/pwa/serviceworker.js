@@ -18,8 +18,7 @@ const PRECACHE = 'precache-v2';
 const RUNTIME = 'runtime';
 
 // A list of local resources we always want to be cached. IE. 'index.html', 'css/main.css'
-const PRECACHE_URLS = [
-];
+const PRECACHE_URLS = ['index.html', 'css/main.css', 'js/main.js','assest/img/blue_water.jpg'];
 
 // The install handler takes care of precaching the resources we always need.
 self.addEventListener('install', event => {
